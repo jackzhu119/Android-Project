@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/root" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+    <ScrollView android:id="@+id/page_scroll" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:fillViewport="true" android:clipToPadding="false">
+        <LinearLayout android:id="@+id/page_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp"/>
+    </ScrollView>
+    <LinearLayout android:id="@+id/bottom_nav" android:layout_width="match_parent" android:layout_height="64dp" android:orientation="horizontal" android:background="#FFFFFF" android:elevation="8dp"/>
+</LinearLayout>

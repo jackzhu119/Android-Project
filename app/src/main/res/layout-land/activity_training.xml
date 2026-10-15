@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/training_root" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp" android:gravity="center_vertical" android:paddingHorizontal="16dp">
+        <TextView android:id="@+id/training_back" android:layout_width="48dp" android:layout_height="48dp" android:gravity="center" android:text="@string/training_back_symbol" android:textSize="32sp" android:textColor="#182843" android:contentDescription="@string/training_exit_description"/>
+        <TextView android:id="@+id/training_heading" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="@string/training_in_progress" android:textColor="#182843" android:textSize="20sp" android:fontFamily="sans-serif-medium"/>
+        <TextView android:id="@+id/training_difficulty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#246BFD" android:textSize="14sp"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="horizontal" android:paddingHorizontal="16dp" android:paddingBottom="10dp">
+        <LinearLayout android:layout_width="0dp" android:layout_weight="0.46" android:layout_height="match_parent" android:orientation="vertical" android:paddingEnd="16dp">
+            <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:fillViewport="true">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                    <LinearLayout android:id="@+id/training_metrics" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                        <TextView android:id="@+id/training_progress_label" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#182843" android:textSize="15sp"/>
+                        <TextView android:id="@+id/training_timer" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#246BFD" android:textSize="22sp" android:fontFamily="sans-serif-medium"/>
+                        <ProgressBar android:id="@+id/training_progress" style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="6dp" android:layout_marginTop="4dp" android:max="1000" android:progressTint="#159F92" android:progressBackgroundTint="#DFE8F5"/>
+                    </LinearLayout>
+                    <TextView android:id="@+id/training_instructions" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#718096" android:textSize="12sp" android:lineSpacingExtra="2dp" android:paddingVertical="6dp"/>
+                    <TextView android:id="@+id/training_live_metrics" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#718096" android:textSize="12sp" android:paddingBottom="6dp"/>
+                </LinearLayout>
+            </ScrollView>
+            <TextView android:id="@+id/training_feedback" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="34dp" android:textSize="13sp" android:textColor="#159F92" android:paddingBottom="6dp" android:accessibilityLiveRegion="polite"/>
+            <LinearLayout android:id="@+id/training_actions" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical"/>
+        </LinearLayout>
+        <com.fingerrehab.training.TrainingCanvasView android:id="@+id/training_canvas" android:layout_width="0dp" android:layout_weight="0.54" android:layout_height="match_parent"/>
+    </LinearLayout>
+</LinearLayout>

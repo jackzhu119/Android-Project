@@ -1,0 +1,5 @@
+/workspace/Android-Project/app/src/main/res/values/styles.xml:5: Error: android:windowLightNavigationBar requires API level 27 (current min is 26) [NewApi]
+<item name="android:navigationBarColor">#FFFFFF</item><item name="android:windowLightNavigationBar">true</item>
+                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+> Task :app:lintDebug FAILED

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">指尖康复</string>
+    <string name="app_english_name">Finger Rehabilitation Training</string>
+    <string name="back_symbol">‹</string>
+    <string name="navigate_back">返回</string>
+</resources>

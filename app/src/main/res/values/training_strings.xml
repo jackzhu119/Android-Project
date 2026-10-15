@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="training_back_symbol" translatable="false">‹</string>
+    <string name="training_exit_description">退出训练</string>
+    <string name="training_in_progress">训练中</string>
+    <string name="training_timer_format" translatable="false">%1$02d:%2$02d</string>
+    <string name="training_round_remaining">本轮剩余 %1$d 秒</string>
+    <string name="training_session_remaining">训练剩余 %1$d 秒</string>
+    <string name="training_coverage_format">路径覆盖  %1$.0f%%</string>
+    <string name="training_round_format">第 %1$d / %2$d 轮</string>
+    <string name="training_completed_format">已完成  %1$d / %2$d</string>
+    <string name="training_trace_legend">蓝色 · 目标路径     青色 · 实际轨迹</string>
+    <string name="training_deviation_samples_format">实时平均偏差 %1$.1f%%  ·  采样 %2$d 点</string>
+    <string name="training_click_summary_format">成功 %1$d   ·   错误 %2$d</string>
+    <string name="training_reaction_summary_format">成功 %1$d   ·   错误 %2$d   ·   超时 %3$d</string>
+    <string name="training_instructions_accessibility">%1$s。点击查看完整操作说明</string>
+    <string name="training_record_pending">本次训练已结束，记录待保存</string>
+    <string name="training_save_failed_title">记录尚未保存</string>
+    <string name="training_save_failed_message">本次数据仍保留在训练页。请重试保存，或稍后恢复。</string>
+    <string name="training_save_missing_profile">个人档案不存在，请恢复原档案后重试保存</string>
+    <string name="training_save_wrong_profile">请先切回开始本次训练时使用的个人档案，再重试保存</string>
+    <string name="training_retry_save">重试保存</string>
+    <string name="training_return_to_session">返回训练页</string>
+    <string name="training_recover_title">发现上次训练进度</string>
+    <string name="training_recover_message">上次的「%1$s」还有本地进度。可以恢复上次任务，或将它保存为中断记录，再开始本次选择的「%2$s」。</string>
+    <string name="training_recover_previous">恢复上次训练</string>
+    <string name="training_recover_start_requested">保存中断并开始本次</string>
+    <string name="training_recover_finished_message">上次「%1$s」已结束，结果尚待保存。可以完成上次保存操作，或保留原结果后开始本次选择的「%2$s」。</string>
+    <string name="training_recover_save_result">完成上次保存</string>
+    <string name="training_recover_save_and_start">保存结果并开始本次</string>
+    <string name="training_keep_and_return">保留数据并返回</string>
+    <string name="training_snapshot_failed">进度尚未写入本地，数据仍保留在当前页。请检查存储空间后重试。</string>
+</resources>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><title>API 兼容性问题与修复核对</title><style>
+* { box-sizing: border-box; }
+html,body { margin:0; width:1280px; height:900px; overflow:hidden; }
+body { background:#eff4f8; color:#17334c; font:20px "Noto Sans CJK SC",sans-serif; }
+.page { padding:40px 44px 26px; height:900px; display:flex; flex-direction:column; }
+.eyebrow { color:#267386; font-size:15px; font-weight:700; letter-spacing:2px; }
+h1 { font-size:34px; margin:9px 0 9px; font-weight:750; letter-spacing:.2px; }
+.intro { font-size:18px; color:#526a7b; margin:0 0 24px; }
+.grid { display:grid; grid-template-columns:1.12fr 1fr; gap:22px; flex:1; min-height:0; }
+.stack { display:flex; flex-direction:column; gap:20px; }
+.card { border:1px solid #d6e0e8; border-radius:14px; overflow:hidden; background:white; box-shadow:0 6px 16px #18365008; }
+.cardhead { background:#f9fbfd; padding:17px 20px 15px; border-bottom:1px solid #e3e9ef; }
+.cardhead strong { display:block; font-size:19px; }
+.cardhead small { display:block; color:#657d8d; font:14px "Noto Sans Mono CJK SC",monospace; margin-top:6px; overflow-wrap:anywhere; }
+.code { padding:17px 0; }
+.line { display:flex; padding:3px 15px 3px 0; line-height:1.5; font-size:17px; }
+.line>span { width:45px; flex:none; text-align:right; padding-right:14px; color:#9aabb7; font:15px "Noto Sans Mono CJK SC",monospace; }
+.line code { font-family:"Noto Sans Mono CJK SC",monospace; white-space:pre-wrap; overflow-wrap:anywhere; }
+.line.highlight { background:#e4f5f2; }
+.omission { color:#8394a1; font-size:12px; }
+.note { margin:15px 20px 18px; font-size:16px; line-height:1.65; color:#597181; }
+table { border-collapse:collapse; width:calc(100% - 40px); margin:14px 20px 10px; font-size:17px; }
+td { padding:10px 0; border-bottom:1px solid #e9eef2; }
+td:first-child { width:44%; color:#207587; font-family:"Noto Sans Mono CJK SC",monospace; }
+.footer { margin-top:18px; display:flex; justify-content:space-between; gap:15px; font-size:13px; color:#718697; }
+.pill { display:inline-block; padding:7px 13px; border-radius:8px; font-size:16px; background:#ddf4eb; color:#12664d; font-weight:650; }
+.terminal { background:#132b3b; color:#d9e8ee; border-radius:12px; padding:22px 26px; }
+.terminal pre { margin:0; white-space:pre-wrap; overflow-wrap:anywhere; font:18px/1.75 "Noto Sans Mono CJK SC",monospace; }
+.command { color:#83e0cf; }
+.success { color:#98ebbd; font-weight:700; }
+.log-label { color:#617f92; font-size:15px; margin:15px 0 10px; }
+.build-grid { display:grid; grid-template-columns:1.65fr 1fr; gap:22px; flex:1; }
+.info { padding:22px; }
+.info h2 { font-size:21px; margin:0 0 14px; }
+.info p { font-size:17px; line-height:1.8; margin:0 0 20px; }
+.info code { font:14px/1.7 "Noto Sans Mono CJK SC",monospace; overflow-wrap:anywhere; }
+.warn { border-color:#ecd9cc; }
+.warn .cardhead { background:#fff5ee; }
+.errorcode { margin:20px; background:#fff4f0; padding:17px 18px; border-left:4px solid #d77655; border-radius:6px; }
+.errorcode pre { font:16px/1.7 "Noto Sans Mono CJK SC",monospace; margin:0; white-space:pre-wrap; overflow-wrap:anywhere; }
+.comparison { display:grid; grid-template-columns:1fr 1.06fr; gap:22px; flex:1; min-height:0; }
+.bottomnote { background:#e6f2f5; padding:15px 19px; border-radius:10px; font-size:16px; line-height:1.65; margin-top:18px; }
+</style></head><body><main class="page"><div class="eyebrow">移动医疗开发课程设计 · 第二周佐证</div><h1>API 兼容性问题与修复核对</h1><p class="intro">历史调试记录 · 当前已修复 · 原始报错与真实源文件对照预览，非 IDE 截图。</p><div class="comparison"><section class="card warn"><div class="cardhead"><strong>历史兼容性错误（已修复）</strong><small>/tmp/finger-lint.log · 原始日志摘录</small></div><div class="errorcode"><pre>/workspace/Android-Project/app/src/main/res/values/styles.xml:5: Error: android:windowLightNavigationBar requires API level 27 (current min is 26) [NewApi]
+&lt;item name=&quot;android:navigationBarColor&quot;&gt;#FFFFFF&lt;/item&gt;&lt;item name=&quot;android:windowLightNavigationBar&quot;&gt;true&lt;/item&gt;
+                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+&gt; Task :app:lintDebug FAILED</pre></div><p class="note">问题原因：最低支持 API 26，但浅色导航栏属性需要 API 27。历史日志记录的是修复前的检查失败。</p><p class="note">取自工程早期兼容性检查记录；后续已迁移至 API 27 专属资源目录。</p></section><section class="card "><div class="cardhead"><strong>当前修复后的资源文件</strong><small>app/src/main/res/values-v27/styles.xml</small></div><div class="code"><div class="line"><span>1</span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</code></div><div class="line"><span>2</span><code>&lt;resources&gt;</code></div><div class="line"><span>3</span><code>    &lt;style name=&quot;AppTheme&quot; parent=&quot;BaseAppTheme&quot;&gt;</code></div><div class="line"><span>4</span><code>        &lt;item name=&quot;android:navigationBarColor&quot;&gt;#FFFFFF&lt;/item&gt;</code></div><div class="line highlight"><span>5</span><code>        &lt;item name=&quot;android:windowLightNavigationBar&quot;&gt;true&lt;/item&gt;</code></div><div class="line"><span>6</span><code>    &lt;/style&gt;</code></div><div class="line"><span>7</span><code>&lt;/resources&gt;</code></div></div><p class="note">API 27 专属属性放到 values-v27，交由 Android 根据系统版本选择资源。</p><div class="cardhead"><strong>基础主题（节选）</strong><small>app/src/main/res/values/styles.xml</small></div><div class="code"><div class="line highlight"><span>8</span><code>        &lt;item name=&quot;android:navigationBarColor&quot;&gt;#182843&lt;/item&gt;</code></div></div></section></div><div class="bottomnote">当前文件核对：基础 values/styles.xml 不含该 API 27 属性；values-v27/styles.xml 单独定义。历史报错与当前修复状态分开标注。</div><div class="footer"><span>历史日志摘录行号：42—44；完整副本：source/historical-lint.log。</span><span>整理时间：2026-10-15 12:56:57 UTC+08:00</span></div></main></body></html>

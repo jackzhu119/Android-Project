@@ -1,0 +1,47 @@
+{
+  "profiles": [
+    {
+      "id": 1,
+      "nickname": "RehabQA",
+      "daily_goal": 3
+    }
+  ],
+  "records": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "type": "trace",
+      "subtype": "line",
+      "status": "completed",
+      "valid": 1,
+      "score": 98.9,
+      "duration_ms": 5206,
+      "mean_deviation": 0.0005931499413413503,
+      "coverage": 1.0,
+      "stability": 0.9767485956691437
+    }
+  ],
+  "savedSamples": 47,
+  "afterForceStopRestart": true,
+  "device": "emulator-5554",
+  "androidVersion": "8.0.0",
+  "sdk": 26,
+  "screen": "480x800 / 240dpi",
+  "virtualization": "pure software; no KVM; accel off; SwiftShader",
+  "apkVersion": "1.0.1",
+  "install": "Success",
+  "startActivity": "Status: ok; ProfileActivity on first launch, MainActivity on restart",
+  "observedHomeAfterRestart": {
+    "todayCompleted": 1,
+    "dailyGoal": 3,
+    "progressPercent": 33.3,
+    "recentScore": 98.9
+  },
+  "interaction": "UIAutomator/ADB input tap; input swipe 153 515 327 408 2000; actual Android MotionEvents",
+  "androidRuntimeErrorsObserved": false,
+  "limitations": [
+    "模拟器冒烟仅覆盖首次引导、建档、简单直线、保存、强停重开与首页统计",
+    "其他模式、提醒和系统重启投递未做本轮模拟器完整验收",
+    "仍未进行真实手机验收；软件模拟器性能与反应时不代表手机或人类表现"
+  ]
+}

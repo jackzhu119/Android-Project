@@ -1,0 +1,256 @@
+{
+  "schemaVersion": 2,
+  "testedAt": "2026-10-15T13:19:57.062591+08:00",
+  "appVersion": "1.0.2",
+  "versionCode": 3,
+  "apkPath": "app/build/outputs/apk/debug/app-debug.apk",
+  "apkSha256": "33f68c8cca1de7f05664bb36869f68e762d47fbe44eb1e021ce1dd39fe0d3422",
+  "device": {
+    "serial": "emulator-5554",
+    "androidVersion": "8.0.0",
+    "sdk": 26,
+    "screen": "480x800 / 240dpi",
+    "runtime": "pure software; accel off; SwiftShader; no KVM"
+  },
+  "install": {
+    "command": "adb -s emulator-5554 install -r app/build/outputs/apk/debug/app-debug.apk",
+    "result": "Success",
+    "existingDataPreserved": true,
+    "baseline": "docs/EMULATOR_SMOKE.json"
+  },
+  "checks": {
+    "upgradePreservesBaseline": {
+      "passed": true,
+      "profileId": 1,
+      "nickname": "RehabQA",
+      "originalRecordId": 1,
+      "originalScore": 98.9,
+      "originalSavedSamples": 47
+    },
+    "unstartedTrainingBack": {
+      "passed": true,
+      "interaction": "训练页→开始直线描绘→未点开始直接系统返回键",
+      "interruptionConfirmationShown": false,
+      "recordCountBefore": 1,
+      "recordCountAfter": 1
+    },
+    "profileDraftContinueAndDiscard": {
+      "passed": true,
+      "interaction": "编辑个人档案→真实输入追加Temp→返回→继续编辑→返回→放弃",
+      "draftAfterContinue": "RehabQATemp",
+      "databaseNicknameAfterDiscard": "RehabQA"
+    },
+    "planDraftContinueAndDiscard": {
+      "passed": true,
+      "interaction": "创建计划→目标改5→返回→继续编辑→返回→放弃修改",
+      "draftAfterContinue": 5,
+      "databasePlanCountAfterDiscard": 0
+    },
+    "planSaveAndReturn": {
+      "passed": true,
+      "interaction": "重新创建计划→目标改5→返回→保存并返回",
+      "databasePlan": {
+        "id": 1,
+        "user_id": 1,
+        "daily_goal": 5,
+        "hour": 19,
+        "minute": 0,
+        "type": "all",
+        "reminder_enabled": 0
+      }
+    },
+    "tappingSimpleRealTouchCompletion": {
+      "passed": true,
+      "interaction": "从正常导航进入连续点击，点击开始后通过ADB input tap发送12次真实ACTION_DOWN/ACTION_UP",
+      "screenTouchCenter": [
+        240,
+        461
+      ],
+      "actualTouchAttempts": 12,
+      "savedEventCount": 12,
+      "savedOutcomes": [
+        "hit",
+        "hit",
+        "hit",
+        "hit",
+        "hit",
+        "hit",
+        "hit",
+        "hit",
+        "hit",
+        "hit",
+        "hit",
+        "hit"
+      ],
+      "record": {
+        "id": 2,
+        "user_id": 1,
+        "session_id": "4df0f3ac-26cb-4fd5-b51a-d409d31e7f65",
+        "type": "coordination",
+        "subtype": "tapping",
+        "difficulty": 0,
+        "started_at": 1792041439997,
+        "ended_at": 1792041479335,
+        "duration_ms": 30779,
+        "score": 76.6,
+        "status": "completed",
+        "valid": 1,
+        "errors": 0,
+        "successes": 12,
+        "timeouts": 0,
+        "accuracy": 1.0,
+        "average_reaction_ms": null,
+        "fastest_reaction_ms": null,
+        "mean_deviation": null,
+        "coverage": null,
+        "stability": 0.9129061441469662,
+        "average_interval_ms": 2499.5454545454545
+      },
+      "unrelatedMetricsRemainNull": true
+    },
+    "resultMatchesSavedMeasurements": {
+      "passed": true,
+      "observedScore": 76.6,
+      "observedDuration": "30.8 秒",
+      "observedAccuracy": "100.0%",
+      "observedSuccesses": "12 次",
+      "observedErrors": "0 次",
+      "observedAverageInterval": "2499.5 ms",
+      "observedStability": "91.3%"
+    },
+    "forceStopRestartPersistence": {
+      "passed": true,
+      "interaction": "am force-stop后通过MainActivity正常重开",
+      "profileCount": 1,
+      "recordIds": [
+        1,
+        2
+      ],
+      "planCount": 1,
+      "observedHome": {
+        "todayCompleted": 2,
+        "dailyGoal": 5,
+        "progressPercent": 40.0,
+        "recentScore": 76.6
+      }
+    }
+  },
+  "profiles": [
+    {
+      "id": 1,
+      "nickname": "RehabQA",
+      "age": null,
+      "hand": "右手",
+      "goal": "提升手指运动的稳定与协调",
+      "daily_goal": 3,
+      "created_at": 1792039111573
+    }
+  ],
+  "records": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "session_id": "acbf5e0c-f0ea-4c04-876a-bb7c6d4e1f1d",
+      "type": "trace",
+      "subtype": "line",
+      "difficulty": 0,
+      "started_at": 1792039186301,
+      "ended_at": 1792039199949,
+      "duration_ms": 5206,
+      "score": 98.9,
+      "status": "completed",
+      "valid": 1,
+      "errors": 0,
+      "successes": 0,
+      "timeouts": 0,
+      "accuracy": 0.9851507791668888,
+      "average_reaction_ms": null,
+      "fastest_reaction_ms": null,
+      "mean_deviation": 0.0005931499413413503,
+      "coverage": 1.0,
+      "stability": 0.9767485956691437,
+      "average_interval_ms": null
+    },
+    {
+      "id": 2,
+      "user_id": 1,
+      "session_id": "4df0f3ac-26cb-4fd5-b51a-d409d31e7f65",
+      "type": "coordination",
+      "subtype": "tapping",
+      "difficulty": 0,
+      "started_at": 1792041439997,
+      "ended_at": 1792041479335,
+      "duration_ms": 30779,
+      "score": 76.6,
+      "status": "completed",
+      "valid": 1,
+      "errors": 0,
+      "successes": 12,
+      "timeouts": 0,
+      "accuracy": 1.0,
+      "average_reaction_ms": null,
+      "fastest_reaction_ms": null,
+      "mean_deviation": null,
+      "coverage": null,
+      "stability": 0.9129061441469662,
+      "average_interval_ms": 2499.5454545454545
+    }
+  ],
+  "plans": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "daily_goal": 5,
+      "hour": 19,
+      "minute": 0,
+      "type": "all",
+      "reminder_enabled": 0
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "docs/previews/emulator-round2-profile-draft.png",
+      "sha256": "f501b26f3d677d4861d106002ae1857c299ae22712526272803f821492f5e73a",
+      "source": "adb exec-out screencap -p",
+      "edited": false
+    },
+    {
+      "path": "docs/previews/emulator-round2-plan-saved.png",
+      "sha256": "5de15d38a8643a5c17cf18c2d80127e631b0b4d424e7ac96892429a10012413c",
+      "source": "adb exec-out screencap -p",
+      "edited": false
+    },
+    {
+      "path": "docs/previews/emulator-round2-tapping-result.png",
+      "sha256": "2f6d498c902205a464ca041391963dadb1f4aeb3593c83b7c00f8f50f95806f8",
+      "source": "adb exec-out screencap -p",
+      "edited": false
+    },
+    {
+      "path": "docs/previews/emulator-round2-tapping-metrics.png",
+      "sha256": "61fbefa95e4d3cdc24e884a054574ff958ba05e474c85d2ba5c8f3791d60c356",
+      "source": "adb exec-out screencap -p",
+      "edited": false
+    },
+    {
+      "path": "docs/previews/emulator-round2-home-persisted.png",
+      "sha256": "e4378276e5f8567c9bc7bd82a79c78e22be979402301a09dce463f59ab722f98",
+      "source": "adb exec-out screencap -p",
+      "edited": false
+    }
+  ],
+  "evidenceDirectory": "/workspace/.android-environment/runtime-validation/round2-smoke",
+  "runtimeObservation": {
+    "uiCrashObserved": false,
+    "capturedCrashBufferBytes": 0,
+    "crashBufferReadStderrBytes": 0,
+    "mainLogBufferResetSucceeded": false,
+    "note": "主日志清空命令返回失败；实际UI流程未见崩溃，随后读取crash缓冲为空，不声称检查了全部系统日志。"
+  },
+  "limitations": [
+    "本轮是Android 8/API26纯软件模拟器验收，未进行真实手机验收；ADB及软件模拟器延迟不能代表真人点击节奏或康复表现。",
+    "本轮设备完整训练仅覆盖简单连续点击；基线文档另覆盖简单直线。随机反应、顺序点击、圆形和螺旋训练未做本轮设备完整流程。",
+    "实际保存计划的提醒关闭；本轮未验证通知真实投递、Android13以上通知权限与系统重启恢复投递。",
+    "本轮未额外执行旋转、后台进程回收、存储耗尽等设备故障场景。"
+  ]
+}

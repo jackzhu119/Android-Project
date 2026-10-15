@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><title>工程配置与基础目录核对</title><style>
+* { box-sizing: border-box; }
+html,body { margin:0; width:1280px; height:900px; overflow:hidden; }
+body { background:#eff4f8; color:#17334c; font:20px "Noto Sans CJK SC",sans-serif; }
+.page { padding:40px 44px 26px; height:900px; display:flex; flex-direction:column; }
+.eyebrow { color:#267386; font-size:15px; font-weight:700; letter-spacing:2px; }
+h1 { font-size:34px; margin:9px 0 9px; font-weight:750; letter-spacing:.2px; }
+.intro { font-size:18px; color:#526a7b; margin:0 0 24px; }
+.grid { display:grid; grid-template-columns:1.12fr 1fr; gap:22px; flex:1; min-height:0; }
+.stack { display:flex; flex-direction:column; gap:20px; }
+.card { border:1px solid #d6e0e8; border-radius:14px; overflow:hidden; background:white; box-shadow:0 6px 16px #18365008; }
+.cardhead { background:#f9fbfd; padding:17px 20px 15px; border-bottom:1px solid #e3e9ef; }
+.cardhead strong { display:block; font-size:19px; }
+.cardhead small { display:block; color:#657d8d; font:14px "Noto Sans Mono CJK SC",monospace; margin-top:6px; overflow-wrap:anywhere; }
+.code { padding:17px 0; }
+.line { display:flex; padding:3px 15px 3px 0; line-height:1.5; font-size:17px; }
+.line>span { width:45px; flex:none; text-align:right; padding-right:14px; color:#9aabb7; font:15px "Noto Sans Mono CJK SC",monospace; }
+.line code { font-family:"Noto Sans Mono CJK SC",monospace; white-space:pre-wrap; overflow-wrap:anywhere; }
+.line.highlight { background:#e4f5f2; }
+.omission { color:#8394a1; font-size:12px; }
+.note { margin:15px 20px 18px; font-size:16px; line-height:1.65; color:#597181; }
+table { border-collapse:collapse; width:calc(100% - 40px); margin:14px 20px 10px; font-size:17px; }
+td { padding:10px 0; border-bottom:1px solid #e9eef2; }
+td:first-child { width:44%; color:#207587; font-family:"Noto Sans Mono CJK SC",monospace; }
+.footer { margin-top:18px; display:flex; justify-content:space-between; gap:15px; font-size:13px; color:#718697; }
+.pill { display:inline-block; padding:7px 13px; border-radius:8px; font-size:16px; background:#ddf4eb; color:#12664d; font-weight:650; }
+.terminal { background:#132b3b; color:#d9e8ee; border-radius:12px; padding:22px 26px; }
+.terminal pre { margin:0; white-space:pre-wrap; overflow-wrap:anywhere; font:18px/1.75 "Noto Sans Mono CJK SC",monospace; }
+.command { color:#83e0cf; }
+.success { color:#98ebbd; font-weight:700; }
+.log-label { color:#617f92; font-size:15px; margin:15px 0 10px; }
+.build-grid { display:grid; grid-template-columns:1.65fr 1fr; gap:22px; flex:1; }
+.info { padding:22px; }
+.info h2 { font-size:21px; margin:0 0 14px; }
+.info p { font-size:17px; line-height:1.8; margin:0 0 20px; }
+.info code { font:14px/1.7 "Noto Sans Mono CJK SC",monospace; overflow-wrap:anywhere; }
+.warn { border-color:#ecd9cc; }
+.warn .cardhead { background:#fff5ee; }
+.errorcode { margin:20px; background:#fff4f0; padding:17px 18px; border-left:4px solid #d77655; border-radius:6px; }
+.errorcode pre { font:16px/1.7 "Noto Sans Mono CJK SC",monospace; margin:0; white-space:pre-wrap; overflow-wrap:anywhere; }
+.comparison { display:grid; grid-template-columns:1fr 1.06fr; gap:22px; flex:1; min-height:0; }
+.bottomnote { background:#e6f2f5; padding:15px 19px; border-radius:10px; font-size:16px; line-height:1.65; margin-top:18px; }
+</style></head><body><main class="page"><div class="eyebrow">移动医疗开发课程设计 · 第二周佐证</div><h1>工程配置与基础目录核对</h1><p class="intro">工作区源文件预览 · 直接读取真实配置与现有目录生成，非 Android Studio 截图。</p><div class="grid"><section class="card "><div class="cardhead"><strong>Android 模块编译配置（节选）</strong><small>app/build.gradle</small></div><div class="code"><div class="line"><span>5</span><code>android {</code></div><div class="line"><span>6</span><code>    namespace &#x27;com.fingerrehab&#x27;</code></div><div class="line highlight"><span>7</span><code>    compileSdk 36</code></div><div class="line"><span>8</span><code>    buildToolsVersion &#x27;36.0.0&#x27;</code></div><div class="line"><span>9</span><code>    defaultConfig {</code></div><div class="line"><span>10</span><code>        applicationId &#x27;com.fingerrehab&#x27;</code></div><div class="line highlight"><span>11</span><code>        minSdk 26</code></div><div class="line highlight"><span>12</span><code>        targetSdk 35</code></div><div class="line omission"><span>…</span><code>部分内容省略</code></div><div class="line"><span>17</span><code>    compileOptions {</code></div><div class="line highlight"><span>18</span><code>        sourceCompatibility JavaVersion.VERSION_17</code></div><div class="line highlight"><span>19</span><code>        targetCompatibility JavaVersion.VERSION_17</code></div><div class="line highlight"><span>20</span><code>    }</code></div></div><p class="note">核对 SDK 版本、最低兼容版本与 Java 编译选项，确认基础构建环境。</p></section><div class="stack"><section class="card "><div class="cardhead"><strong>工程入口配置（节选）</strong><small>settings.gradle</small></div><div class="code"><div class="line"><span>17</span><code>rootProject.name = &#x27;FingerRehabilitation&#x27;</code></div><div class="line"><span>18</span><code>include &#x27;:app&#x27;</code></div></div></section><section class="card "><div class="cardhead"><strong>包目录与职责（节选）</strong><small>app/src/main/java/com/fingerrehab/</small></div><table><tr><td>ui/</td><td>界面与交互</td></tr><tr><td>training/</td><td>训练交互与会话</td></tr><tr><td>algorithm/</td><td>训练算法</td></tr><tr><td>database/</td><td>本地数据访问</td></tr><tr><td>utils/</td><td>公共辅助方法</td></tr></table><p class="note">目录名称来自当前工作区；本页仅核对基础分层，不代表各业务模块本周完成验收。</p></section></div></div><div class="footer"><span>来源：项目配置与目录；行号对应当前源文件。</span><span>整理时间：2026-10-15 12:56:57 UTC+08:00</span></div></main></body></html>

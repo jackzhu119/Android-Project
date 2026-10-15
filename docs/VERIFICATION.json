@@ -1,0 +1,161 @@
+{
+  "verifiedAt": "2026-10-15T13:20:10.189710+08:00",
+  "build": "BUILD SUCCESSFUL in 31s",
+  "command": "./gradlew --no-daemon --max-workers=4 :app:assembleDebug :app:testDebugUnitTest :app:lintDebug",
+  "tests": {
+    "total": 166,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "classes": [
+      {
+        "name": "com.fingerrehab.algorithm.DifficultyRecommenderTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "com.fingerrehab.algorithm.TrainingAlgorithmsTest",
+        "tests": 25,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "com.fingerrehab.model.TrainingRecordTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "com.fingerrehab.notification.NotificationPermissionTest",
+        "tests": 8,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "com.fingerrehab.notification.PlanActivityTest",
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "com.fingerrehab.notification.ReminderSchedulerTest",
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "com.fingerrehab.repository.LegacyMetricsTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "com.fingerrehab.repository.RehabRepositoryTest",
+        "tests": 16,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "com.fingerrehab.training.TrainingActivityFlowTest",
+        "tests": 28,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "com.fingerrehab.training.TrainingSessionTest",
+        "tests": 20,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "com.fingerrehab.ui.HistoryPaginationTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "com.fingerrehab.ui.ProfileDraftTest",
+        "tests": 11,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "com.fingerrehab.ui.ResultDetailsTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "com.fingerrehab.ui.UserFlowTest",
+        "tests": 15,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "com.fingerrehab.ui.ViewDataIntegrityTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "com.fingerrehab.visual.VisualRenderingTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ]
+  },
+  "lint": {
+    "errors": 0,
+    "warnings": 25,
+    "byIssue": {
+      "ApplySharedPref": 12,
+      "InconsistentLayout": 1,
+      "OldTargetApi": 1,
+      "UnusedAttribute": 1,
+      "AndroidGradlePluginVersion": 1,
+      "NewerVersionAvailable": 1,
+      "NestedWeights": 2,
+      "ViewConstructor": 1,
+      "SetTextI18n": 4,
+      "RtlSymmetry": 1
+    }
+  },
+  "apk": {
+    "package": "com.fingerrehab",
+    "version": "1.0.2",
+    "versionCode": 3,
+    "minSdk": 26,
+    "targetSdk": 35,
+    "sizeBytes": 204823,
+    "sha256": "33f68c8cca1de7f05664bb36869f68e762d47fbe44eb1e021ce1dd39fe0d3422",
+    "signatureVerification": "apksigner verify exited 0",
+    "permissions": [
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.RECEIVE_BOOT_COMPLETED"
+    ]
+  },
+  "deviceTesting": "Android8/API26软件模拟器升级与实际UI验收；范围及限制见独立证据。无真实手机验收。",
+  "emulatorEvidence": "EMULATOR_SMOKE_1.0.2.json",
+  "previousEmulatorEvidence": "EMULATOR_SMOKE.json (1.0.1 baseline)",
+  "visualRendering": "6张Robolectric原生Skia实际View离屏图；另有真实Android8模拟器截图，来源与版本在TESTING.md区分。",
+  "databaseVersion": 3,
+  "coursework": "第二周已交付材料不属于本次更新，不包含在应用工程ZIP中。"
+}

@@ -1,0 +1,111 @@
+{
+  "generated_at": "2026-10-15 12:56:57 UTC+08:00",
+  "rendering": "Chromium via Playwright; rendered local HTML pages using actual source and log excerpts; not Android Studio screenshots",
+  "command": {
+    "cwd": "/workspace/Android-Project",
+    "environment_activation": "source /workspace/.android-environment/activate.sh",
+    "command": "./gradlew :app:assembleDebug --no-daemon",
+    "exit_code": 0,
+    "result": [
+      "BUILD SUCCESSFUL in 5s",
+      "34 actionable tasks: 34 up-to-date"
+    ]
+  },
+  "screenshots": [
+    {
+      "file": "01_工程配置与目录.png",
+      "html": "01_工程配置与目录.html",
+      "sources": [
+        {
+          "file": "app/build.gradle",
+          "lines": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            17,
+            18,
+            19,
+            20
+          ]
+        },
+        {
+          "file": "settings.gradle",
+          "lines": [
+            17,
+            18
+          ]
+        },
+        {
+          "directory": "app/src/main/java/com/fingerrehab/",
+          "selected_packages": [
+            "ui",
+            "training",
+            "algorithm",
+            "database",
+            "utils"
+          ]
+        }
+      ],
+      "sha256": "e594ac84dd0cd9d5d0ec692751980c771e58b10d47ddae4fa546015c9f8bec42"
+    },
+    {
+      "file": "02_Debug基础构建.png",
+      "html": "02_Debug基础构建.html",
+      "sources": [
+        {
+          "file": "source/assembleDebug.log",
+          "excerpts": "> Task :app:preBuild UP-TO-DATE\n> Task :app:processDebugResources UP-TO-DATE\n> Task :app:compileDebugJavaWithJavac UP-TO-DATE\n> Task :app:validateSigningDebug UP-TO-DATE\n> Task :app:packageDebug UP-TO-DATE\n> Task :app:assembleDebug UP-TO-DATE\n\nBUILD SUCCESSFUL in 5s\n34 actionable tasks: 34 up-to-date"
+        }
+      ],
+      "sha256": "ce3b603b3bccc5d555c54bce4d4874f38e3747976142a1cc7af089345493067d"
+    },
+    {
+      "file": "03_API兼容性调试记录.png",
+      "html": "03_API兼容性调试记录.html",
+      "sources": [
+        {
+          "original_file": "/tmp/finger-lint.log",
+          "preserved_copy": "source/historical-lint.log",
+          "excerpt_lines": [
+            42,
+            43,
+            44
+          ]
+        },
+        {
+          "file": "app/src/main/res/values-v27/styles.xml",
+          "lines": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "file": "app/src/main/res/values/styles.xml",
+          "lines": [
+            8
+          ]
+        }
+      ],
+      "note": "Historical real error; current source contains fix. No errors were introduced for evidence.",
+      "sha256": "a6dda254a757506bb6465aef9553ea878884824619be859c64d1c240ffff8f79"
+    },
+    {
+      "file": "04_模拟器基础页面运行.png",
+      "source": "docs/previews/emulator-home.png",
+      "kind": "Original Android emulator screencap, copied without edits",
+      "device": "Android 8.0 / API 26; 480x800; density 240; software emulation",
+      "context": "基础页面启动，测试档案RehabQA，尚无训练记录",
+      "sha256": "1f3019821cc7a2ea312382eb26bde13ff004595ad8812b56a5272f1adb9a93d9"
+    }
+  ]
+}
